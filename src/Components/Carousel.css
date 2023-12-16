@@ -1,0 +1,46 @@
+/* Carousel.css */
+.carousel {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    transition: transform 0.5s;
+    cursor: pointer;
+    background-color: #2ecc71; /* Elegant green background color */
+    padding: 20px;
+    margin: 5px;
+    color: #fff; /* White text color */
+  
+    &.active {
+      transform-box: scale(1.1);
+    }
+  }
+  /* Carousel.css */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease; /* Add transition to the .carousel class */
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+  
+  /* Adjust the transform property for the active item */
+  .carousel-item.active {
+    transform: translateX(-100%);
+  }
+/* Carousel.css */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease; /* Add transition for smooth sliding */
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+  }
+  
+  /* No need to add a class for the active item */
+    

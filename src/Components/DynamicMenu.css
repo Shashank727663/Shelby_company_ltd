@@ -1,0 +1,76 @@
+/* DynamicMenu.css */
+.dynamic-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.menu-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.menu-item {
+  padding: 8px;
+  border: 1px solid #2980b9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #3498db;
+
+  &:hover {
+    background-color: #2980b9;
+  }
+}
+
+.more-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #3498db;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.more-dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content .menu-item {
+  padding: 8px;
+  border: 1px solid #2980b9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #3498db;
+
+  &:hover {
+    background-color: #2980b9;
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .menu-container {
+    display: none; /* Hide the main menu items */
+  }
+
+  .more-dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .more-dropdown:hover .menu-item {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
