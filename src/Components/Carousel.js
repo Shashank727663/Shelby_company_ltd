@@ -7,7 +7,7 @@ const Carousel = ({ items }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % items.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -25,7 +25,7 @@ const Carousel = ({ items }) => {
           className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
           onClick={() => handleItemClick(index)}
         >
-          {item.content}
+          <img src={item.imageSrc} alt={`Image ${index + 1}`} />
         </div>
       ))}
     </div>

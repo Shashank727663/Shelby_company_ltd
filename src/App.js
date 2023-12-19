@@ -11,24 +11,23 @@ const App = () => {
     { id: 3, label: 'Services' },
     { id: 4, label: 'Contact' },
     {id: 5, label: 'Register'},
-    { id: 6, label: 'Login'}
+    { id: 6, label: 'Login'},
+    {id: 7, label: 'Logout'}
     // Add more menu items as needed
   ];
 
   const carouselItems = [
-    { id: 1, content: 'Item 1' },
-    { id: 2, content: 'Item 2' },
-    { id: 3, content: 'Item 3' },
-    {id: 4, content: 'Item 4'},
-    {id: 5, content: 'Item 5'}
+    { id: 1, imageSrc: 'https://unsplash.com/photos/unpaired-red-nike-sneaker-164_6wVEHfI' },
+  { id: 2, imageSrc: 'https://unsplash.com/photos/a-person-wearing-a-hat-SD9Jyl1xNQ4' },
+  { id: 3, imageSrc: 'https://unsplash.com/photos/black-white-and-red-nike-high-top-sneaker-76w_eDO1u1E' },
     // Add more carousel items as needed
   ];
 
   return (
     <div className="app">
-      <h1>Your React App</h1>
+      <h1>Avataar</h1>
       <DynamicMenu menuItems={menuItems} />
-      <Carousel items={carouselItems} />
+      <Carousel items = {carouselItems} />
     </div>
   );
 };

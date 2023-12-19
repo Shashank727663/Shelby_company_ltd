@@ -1,5 +1,6 @@
 // DynamicMenu.jsx
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import './DynamicMenu.css';
 
 const DynamicMenu = ({ menuItems }) => {
@@ -29,9 +30,9 @@ const DynamicMenu = ({ menuItems }) => {
     <div className="dynamic-menu">
       <div className="menu-container">
         {visibleItems.map(item => (
-          <div key={item.id} className="menu-item">
+          <NavLink key={item.id} to={`/${item.label.toLowerCase()}`} className="menu-item">
             {item.label}
-          </div>
+          </NavLink>
         ))}
       </div>
       {isMobile && (
@@ -39,9 +40,9 @@ const DynamicMenu = ({ menuItems }) => {
           More
           <div className="dropdown-content">
             {hiddenItems.map(item => (
-              <div key={item.id} className="menu-item">
+              <NavLink key={item.id} to={`/${item.label.toLowerCase()}`} className="menu-item">
                 {item.label}
-              </div>
+              </NavLink>
             ))}
           </div>
         </div>
